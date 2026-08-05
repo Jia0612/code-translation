@@ -1,0 +1,25 @@
+{
+  "_comment": "translation-manifest.json — machine-readable state of a translation course. Lives in the course output directory. Every batch reads this first and rebuilds _base.html, Module 1 and index.html from it. Keep it valid JSON (delete this _comment key in the real file).",
+  "source": "https://github.com/user/repo OR /absolute/local/path",
+  "commit": "full git SHA recorded via `git rev-parse HEAD` right after clone (or local repo HEAD; add \"-dirty\" suffix if working tree was dirty; null if not a git repo)",
+  "generatedAt": "2026-08-03T18:00:00Z",
+  "courseTitle": "repo-name, translated line by line",
+  "accent": "teal",
+  "selectedFiles": [
+    { "path": "src/sync.js", "nonEmptyLines": 240, "status": "done" },
+    { "path": "src/parser.js", "nonEmptyLines": 180, "status": "pending" }
+  ],
+  "completedRanges": [
+    { "file": "src/sync.js", "lines": "1-310", "nonEmptyLines": 240, "module": "02" }
+  ],
+  "modules": [
+    { "id": "module-1", "file": "modules/01-overview.html", "title": "The Big Picture" },
+    { "id": "module-2", "file": "modules/02-sync.html", "title": "src/sync.js" }
+  ],
+  "definedTerms": [
+    { "term": "cache", "firstModule": "module-2" }
+  ],
+  "syntaxCards": [
+    { "id": "syntax-enumerate", "name": "enumerate()", "module": "module-2" }
+  ]
+}

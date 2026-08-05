@@ -1,0 +1,222 @@
+/* ============================================================
+   extra.css — code-translation skill additions.
+   Loaded AFTER styles.css. Never edit styles.css or main.js;
+   all new components for the translation course live here.
+   ============================================================ */
+
+/* ---------- Anchor targets: keep jumped-to rows below the nav ---------- */
+.tl-code[id],
+.syntax-card[id],
+.section-header[id] {
+  scroll-margin-top: 96px;
+}
+
+/* ---------- Line numbers inside translation rows ---------- */
+/* Usage: <pre class="tl-code" id="m2-L14"><code><span class="tl-ln">14</span>...</code></pre> */
+.tl-ln {
+  display: inline-block;
+  min-width: 2.6em;
+  margin-right: 0.6em;
+  color: rgba(205, 214, 244, 0.35);
+  text-align: right;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* ---------- Section headers inside a file module ---------- */
+/* One per block: "Module-level setup", "function syncBooks()", ... */
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  margin: var(--space-10) 0 var(--space-3);
+  padding-bottom: var(--space-2);
+  border-bottom: 2px solid var(--color-border-light);
+}
+.section-header .sh-kind {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+  white-space: nowrap;
+}
+.section-header .sh-name {
+  font-family: var(--font-mono);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  word-break: break-word;
+}
+.section-header .sh-lines {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+/* ---------- Syntax card (first appearance of a syntax feature) ---------- */
+.syntax-card {
+  margin: var(--space-6) 0;
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border-light);
+  border-top: 3px solid var(--color-accent);
+  overflow: hidden;
+}
+.syntax-card-head {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-5) 0;
+}
+.syntax-card-badge {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+  background: var(--color-accent-light);
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+.syntax-card-name {
+  font-family: var(--font-mono);
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+.syntax-card-body {
+  padding: var(--space-3) var(--space-5) var(--space-4);
+}
+.syntax-card-body p {
+  margin: 0 0 var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+.syntax-card-example {
+  margin: var(--space-2) 0;
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-bg-code);
+  color: #cdd6f4;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  line-height: 1.7;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-x: hidden;
+}
+.syntax-card-context {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+.syntax-card-context a {
+  color: var(--color-accent);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--color-accent-muted);
+}
+.syntax-card-context a:hover {
+  border-bottom-style: solid;
+}
+
+/* ---------- Syntax index (end of each file module) ---------- */
+.syntax-index {
+  margin: var(--space-8) 0;
+  padding: var(--space-5) var(--space-6);
+  background: var(--color-surface-warm);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-light);
+}
+.syntax-index-title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  margin: 0 0 var(--space-3);
+  color: var(--color-text-primary);
+}
+.syntax-index ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-2) var(--space-5);
+}
+.syntax-index li {
+  font-size: var(--text-sm);
+  line-height: 1.6;
+}
+.syntax-index a {
+  font-family: var(--font-mono);
+  color: var(--color-accent);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--color-accent-muted);
+}
+.syntax-index a:hover { border-bottom-style: solid; }
+.syntax-index .si-desc {
+  color: var(--color-text-muted);
+}
+
+/* ---------- Skipped-files styling for the file tree map ---------- */
+/* Add .ft-skipped to a .ft-file / .ft-folder row in the Module 1 map. */
+.ft-skipped { opacity: 0.55; }
+.ft-skipped > .ft-name { color: var(--color-text-muted) !important; }
+.ft-tag {
+  display: inline-block;
+  margin-left: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 1px var(--space-2);
+  border-radius: var(--radius-sm);
+  vertical-align: middle;
+}
+.ft-tag-translated {
+  background: var(--color-accent-light);
+  color: var(--color-accent);
+}
+.ft-tag-skipped {
+  background: var(--color-border-light);
+  color: var(--color-text-muted);
+}
+
+/* ---------- File-part banner (split files: "Part 2 of 2") ---------- */
+.part-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: var(--space-2) 0 var(--space-4);
+  padding: var(--space-1) var(--space-3);
+  background: var(--color-accent-light);
+  color: var(--color-accent);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+}
+
+/* ---------- Source pin (commit SHA shown in Module 1) ---------- */
+.source-pin {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  word-break: break-all;
+}
+.source-pin code {
+  background: var(--color-surface-warm);
+  padding: 1px var(--space-2);
+  border-radius: var(--radius-sm);
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .section-header { flex-wrap: wrap; }
+  .section-header .sh-lines { margin-left: 0; width: 100%; }
+  .tl-ln { min-width: 2em; }
+}
