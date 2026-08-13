@@ -1,9 +1,15 @@
 ---
 name: code-translation
 description: "Translate a codebase's core files line by line into simple English, as a beautiful interactive single-page HTML 'translation book'. Use when someone wants a line-by-line plain-language translation of code — trigger on 'translate this repo', 'line-by-line translation', 'code translation', '逐行翻译', '把这个仓库翻译成大白话', or a GitHub link + any 'translate' request. BOUNDARY: if the user asks to 'make a course' / '做成课程' / 'teach me this codebase', use codebase-to-course instead — that skill teaches selected highlights with architecture modules; THIS skill exhaustively translates every non-empty line of user-selected core files. Same look and feel as the -to-course family."
+license: MIT
+metadata:
+  author: Jia0612
+  version: "1.0"
 ---
 
 # Code-Translation
+
+Requirements: filesystem and browser access. Remote repositories also require Git and network access.
 
 Turn a GitHub repo (or local folder) into an interactive, scroll-based HTML book that translates the core source files **line by line** into simple English — like a LeetCode solution walkthrough, but for a real codebase. The user picks which files get translated; every non-empty line of a picked file gets exactly one first-person, plain-English explanation.
 

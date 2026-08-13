@@ -49,6 +49,14 @@ Build and verify the interactive HTML book
 
 ## Quick Start
 
+### Paste into a skills-compatible agent
+
+```text
+Install and use the Agent Skill from https://github.com/Jia0612/code-translation
+```
+
+This requires an Agent Skills-compatible client with GitHub and filesystem access. Otherwise clone the repository and run `./install.sh` with `codex`, `claude`, `gemini`, `cursor`, `copilot`, or `opencode`.
+
 ### 1. Install the skill
 
 ```bash
